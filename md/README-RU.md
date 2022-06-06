@@ -1,21 +1,21 @@
 ### readme: [Главная](./../README.md) | [EN](./README-EN.md)
 
-# {NAME-PACKAGE}
+# TERMINAL-STYLES-TEXT
 
-> {description}
+> ...
 
 ## # Установка
 
 Для тех кто использует NPM:
 
 ```sh
-npm install --save-dev {name-package}
+npm install terminal-styles-text
 ```
 
 Для тех кто использует YARN:
 
 ```sh
-yarn add {name-package} --dev
+yarn add terminal-styles-text
 ```
 
 ## # Лицензия

@@ -1,12 +1,10 @@
-# {NAME-PACKAGE}
+# TERMINAL-STYLES-TEXT
 
-![status] ![license]
+![license] [![skeleton-lib-node]](https://github.com/ManushovRodion/skeleton-lib-node)
 
 [license]: https://img.shields.io/github/license/ManushovRodion/skeleton-lib-node?style=for-the-badge
-[status]: https://img.shields.io/badge/template-skeleton-9cf?style=for-the-badge
+[skeleton-lib-node]: https://img.shields.io/badge/created%20on%20the%20basis-%20skeleton--lib--node-blue.svg?style=for-the-badge
 
-- Документация пользователя: [Русский](./md/README-RU.md)
-- Документация разработчика библиотеки: [Русский](./md/README-DEVELOP-RU.md)
+- Документация: [Русский](./md/README-RU.md)
 
-- Documentation user: [English](./md/README-EN.md)
-- Documentation developer by lib: [English](./md/README-DEVELOP-EN.md)
+- Documentation: [English](./md/README-EN.md)

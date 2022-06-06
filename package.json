@@ -1,23 +1,23 @@
 {
-  "name": "name-package",
+  "name": "terminal-styles-text",
   "version": "0.1.0",
-  "description": "",
+  "description": "...",
   "license": "MIT",
   "author": "{author-repo}",
   "repository": {
     "type": "git",
-    "url": "git+https://{git-repo}/{name-package}.git"
+    "url": "git+https://github.com/ManushovRodion/terminal-styles-text.git"
   },
   "bugs": {
-    "url": "https://{git-repo}/{name-package}/issues"
+    "url": "https://github.com/ManushovRodion/terminal-styles-text/issues"
   },
-  "homepage": "https://{git-repo}/{name-package}",
-  "main": "dist/{name-package}.cjs.js",
-  "types": "dist/{name-package}.d.ts",
-  "unpkg": "dist/{name-package}.umd.js",
-  "module": "dist/{name-package}.es.js",
+  "homepage": "https://github.com/ManushovRodion/terminal-styles-text",
+  "main": "dist/terminal-styles-text.cjs.js",
+  "types": "dist/terminal-styles-text.d.ts",
+  "unpkg": "dist/terminal-styles-text.umd.js",
+  "module": "dist/terminal-styles-text.es.js",
   "bin": {
-    "{name-package}": "./bin/cli.js"
+    "terminal-styles-text": "./bin/cli.js"
   },
   "keywords": [],
   "files": [
