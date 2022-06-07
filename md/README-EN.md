@@ -41,9 +41,10 @@ export function createMessageError(message: string) {
 ```
 
 1. You can combine different utilities that must be specified before the text.
-2. Be sure to complete the reset utility - the text, after which it becomes the default for the terminal.
-3. Utilities have shorter entries (alices).
+2. Be sure to complete the ```reset``` utility - the text, after which it becomes the default for the terminal.
+3. Utilities have shorter entries (```alias```).
 
 ## # License
 
 [MIT](./../LICENSE)
+ß
