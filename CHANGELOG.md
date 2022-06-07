@@ -1,0 +1,5 @@
+# CHANGELOG: TERMINAL-STYLES-TEXT
+
+## # v1.0.0 (2022-06-08)
+
+Релиз пакета ```TERMINAL-STYLES-TEXT```

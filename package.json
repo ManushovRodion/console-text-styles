@@ -1,7 +1,7 @@
 {
   "name": "terminal-styles-text",
-  "version": "0.1.0",
-  "description": "...",
+  "version": "1.0.0",
+  "description": "[RU]Утилита, которая позволяет задать стиль текста для терминала;[EN]A utility that allows you to set the text style for the terminal",
   "license": "MIT",
   "author": "ManushovRodion <rodion-krox@mauil.ru>",
   "repository": {
