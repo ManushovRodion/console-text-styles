@@ -69,6 +69,4 @@ export function cli(process: NodeJS.Process) {
   ];
 
   console.log(context.join('\n'));
-
-  process.exit(1);
 }

@@ -14,4 +14,3 @@
 
 - [x] DEMO
 - [x] Поддержка TypeScript
-- [ ] Unit тестирование
