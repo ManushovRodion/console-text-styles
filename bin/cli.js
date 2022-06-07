@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-const lib = require('../dist/terminal-styles-text.cjs');
+const lib = require('../dist/demo.cjs');
 
 try {
   lib.cli(process);
