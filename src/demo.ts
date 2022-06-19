@@ -58,7 +58,7 @@ export function cli(process: NodeJS.Process) {
   const context = [
     createLine(MAX_COUNT_CHARS, '-', '#'),
     createLine(MAX_COUNT_CHARS, ' ', '|'),
-    createRow(MAX_COUNT_CHARS, 'DEMO: TERMINAL-STYLES-TEXT', '|'),
+    createRow(MAX_COUNT_CHARS, 'DEMO: @CONSOLE-KIT/TEXT-STYLES', '|'),
     createRow(MAX_COUNT_CHARS, '-------', '|'),
     createRow(MAX_COUNT_CHARS, `version ${packageJson.version}`, '|'),
     createLine(MAX_COUNT_CHARS, ' ', '|'),

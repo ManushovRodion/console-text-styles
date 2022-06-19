@@ -1,6 +1,6 @@
 ### readme: [Главная](./../README.md)
 
-# TERMINAL-STYLES-TEXT
+# @CONSOLE-KIT/TEXT-STYLES
 
 ## # Команды
 

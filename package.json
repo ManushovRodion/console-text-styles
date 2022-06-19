@@ -1,23 +1,23 @@
 {
-  "name": "terminal-styles-text",
+  "name": "@console-kit/text-styles",
   "version": "1.0.0",
-  "description": "[RU]Утилита, которая позволяет задать стиль текста для терминала;[EN]A utility that allows you to set the text style for the terminal",
+  "description": "[RU]Утилита, которая позволяет задать стиль текста console js, используюя ANSI;[EN]Utility that allows you to style console js text using ANSI",
   "license": "MIT",
   "author": "ManushovRodion <rodion-krox@mauil.ru>",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ManushovRodion/terminal-styles-text.git"
+    "url": "git+https://github.com/ManushovRodion/console-kit-text-styles.git"
   },
   "bugs": {
-    "url": "https://github.com/ManushovRodion/terminal-styles-text/issues"
+    "url": "https://github.com/ManushovRodion/console-kit-text-styles/issues"
   },
-  "homepage": "https://github.com/ManushovRodion/terminal-styles-text",
-  "main": "dist/terminal-styles-text.cjs.js",
-  "types": "dist/terminal-styles-text.d.ts",
-  "unpkg": "dist/terminal-styles-text.umd.js",
-  "module": "dist/terminal-styles-text.es.js",
+  "homepage": "https://github.com/ManushovRodion/console-kit-text-styles",
+  "main": "dist/console-kit-text-styles.cjs.js",
+  "types": "dist/console-kit-text-styles.d.ts",
+  "unpkg": "dist/console-kit-text-styles.umd.js",
+  "module": "dist/console-kit-text-styles.es.js",
   "bin": {
-    "terminal-styles-text": "./bin/cli.js"
+    "console-kit-text-styles": "./bin/cli.js"
   },
   "keywords": [],
   "files": [

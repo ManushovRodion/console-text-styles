@@ -1,26 +1,26 @@
 ### readme: [Главная](./../README.md) | [EN](./README-EN.md)
 
-# TERMINAL-STYLES-TEXT
+# @CONSOLE-KIT/TEXT-STYLES
 
-> Утилита, которая позволяет задать стиль текста для терминала
+> Утилита, которая позволяет задать стиль текста console js, используюя ANSI
 
 ## # Установка
 
 Для тех кто использует NPM:
 
 ```sh
-npm install terminal-styles-text
+npm install @console-kit/text-styles
 ```
 
 Для тех кто использует YARN:
 
 ```sh
-yarn add terminal-styles-text
+yarn add @console-kit/text-styles
 ```
 
 ## # Демо
 
-После установки пакета, в терминале можно вызвать команду `terminal-styles-text`, которая позволяет просмотреть как отображается цвета в вашем терминале
+После установки пакета, в терминале можно вызвать команду `console-kit-text-styles`, которая позволяет просмотреть как отображается цвета в вашем терминале
 
 ## # Доступные утилиты
 
@@ -29,7 +29,7 @@ yarn add terminal-styles-text
 ## # Пример использования
 
 ```ts
-import { fgGreen, fgRed, bold, reset } from 'terminal-styles-text';
+import { fgGreen, fgRed, bold, reset } from '@console-kit/text-styles';
 
 export function createMessageSuccess(message: string) {
   return `${fgGreen}${bold}${message}${reset}`;
@@ -41,8 +41,8 @@ export function createMessageError(message: string) {
 ```
 
 1. Можно комбинировать разные утилиты, которые надо указывать перед текстом.
-2. Обязательно надо завершать утилитой ```reset``` - текст, после нее становится дефолтным для терминала.
-3. У утилит есть более короткие записи (```alias```).
+2. Обязательно надо завершать утилитой `reset` - текст, после нее становится дефолтным для терминала.
+3. У утилит есть более короткие записи (`alias`).
 
 ## # Лицензия
 
