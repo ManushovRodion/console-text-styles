@@ -19,7 +19,17 @@
   "bin": {
     "console-kit-text-styles": "./bin/cli.js"
   },
-  "keywords": [],
+  "keywords": [
+    "console",
+    "terminal",
+    "colors",
+    "text",
+    "styles",
+    "ansi",
+    "js",
+    "node",
+    "kit"
+  ],
   "files": [
     "dist"
   ],
