@@ -17,7 +17,7 @@
   "unpkg": "dist/console-text-styles.umd.js",
   "module": "dist/console-text-styles.es.js",
   "bin": {
-    "console-text-styles": "./bin/cli.js"
+    "demo-console-text-styles": "./bin/cli.js"
   },
   "keywords": [
     "console",
@@ -37,7 +37,7 @@
     "lint": "eslint",
     "lint:format": "prettier --write .",
     "build": "ts-node scripts/build.ts",
-    "demo": "node bin/cli.js"
+    "demo:cli": "node bin/cli.js"
   },
   "dependencies": {},
   "devDependencies": {

@@ -20,7 +20,7 @@ yarn add console-text-styles
 
 ## # Demo
 
-After installing the package in the terminal, you can install the `console-text-styles` command, which allows you to display colors in the final terminal.
+After installing the package in the terminal, you can install the `demo-console-text-styles` command, which allows you to display colors in the final terminal.
 
 ## # Available utilities
 
