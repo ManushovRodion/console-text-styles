@@ -1,5 +1,5 @@
-# CHANGELOG: CONSOLE-TEXT-STYLES
+# CONSOLE-TEXT-STYLES
 
-## # v1.0.0 (2022-06-08)
+- Changelog: [Русский](./docs/CHANGELOG-RU.md)
 
-Релиз пакета `console-text-styles`
+- Changelog: [English](./docs/CHANGELOG-EN.md)
