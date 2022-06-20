@@ -1,5 +1,5 @@
-# CHANGELOG: @CONSOLE-KIT/TEXT-STYLES
+# CHANGELOG: CONSOLE-TEXT-STYLES
 
 ## # v1.0.0 (2022-06-08)
 
-Релиз пакета `@CONSOLE-KIT/TEXT-STYLES`
+Релиз пакета `console-text-styles`

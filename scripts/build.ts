@@ -7,8 +7,7 @@ import { terser } from 'rollup-plugin-terser';
 import { nodeResolve } from '@rollup/plugin-node-resolve';
 import dts from 'rollup-plugin-dts';
 
-import { dependencies } from './../package.json';
-const name = 'console-kit-text-styles';
+import { dependencies, name } from './../package.json';
 
 type Type = 'cjs' | 'es' | 'umd' | 'type';
 

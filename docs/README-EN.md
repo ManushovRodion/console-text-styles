@@ -1,26 +1,26 @@
 ### readme: [Home](./../README.md) | [RU](./README-RU.md)
 
-# @CONSOLE-KIT/TEXT-STYLES
+# CONSOLE-TEXT-STYLES
 
-> Utility that allows you to style console js text using ANSI
+> Utility that allows you to style console js text using ANSI. Primarily focus on the NodeJs terminal.
 
 ## # Install
 
 For those who use NPM:
 
 ```sh
-npm install @console-kit/text-styles
+npm install console-text-styles
 ```
 
 For those who use YARN:
 
 ```sh
-yarn add @console-kit/text-styles
+yarn add console-text-styles
 ```
 
 ## # Demo
 
-After installing the package in the terminal, you can install the `console-kit-text-styles` command, which allows you to display colors in the final terminal.
+After installing the package in the terminal, you can install the `console-text-styles` command, which allows you to display colors in the final terminal.
 
 ## # Available utilities
 
@@ -29,7 +29,7 @@ After installing the package in the terminal, you can install the `console-kit-t
 ## # Usage example
 
 ```ts
-import { fgGreen, fgRed, bold, reset } from '@console-kit/text-styles';
+import { fgGreen, fgRed, bold, reset } from 'console-text-styles';
 
 export function createMessageSuccess(message: string) {
   return `${fgGreen}${bold}${message}${reset}`;
