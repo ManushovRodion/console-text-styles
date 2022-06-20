@@ -1,4 +1,4 @@
-# console-text-styles
+# CONSOLE-TEXT-STYLES
 
 ![license] [![skeleton-lib-node]](https://github.com/ManushovRodion/skeleton-lib-node)
 
