@@ -1,72 +1,66 @@
+import {
+  card,
+  CardTitle,
+  render,
+  rowText,
+  table,
+  TableColumn,
+  TableItem,
+  TableItemGroup,
+  TableOptions,
+} from 'console-layout';
+
 import * as styles from './main';
+import state from './demo/state';
 const packageJson = require('../package.json');
 
-import state from './demo/state';
-import {
-  type ContextRowTable,
-  createLine,
-  createRow,
-  createRowTable,
-} from './demo/window';
-
-const TABLE_LENGTH_COL_INDEX = 7;
-const TABLE_LENGTH_COL_NAME = 34;
-const TABLE_LENGTH_COL_NAME_ALIAS = 30;
-const TABLE_LENGTH_COL_DEMO = 41;
-
-const MAX_COUNT_CHARS =
-  TABLE_LENGTH_COL_INDEX +
-  TABLE_LENGTH_COL_NAME +
-  TABLE_LENGTH_COL_NAME_ALIAS +
-  TABLE_LENGTH_COL_DEMO +
-  3;
-
-export function cli(process: NodeJS.Process) {
-  const demoText = createRow(TABLE_LENGTH_COL_DEMO, 'my demo text!', '', true);
-
-  const headTable: ContextRowTable[] = [
-    { length: TABLE_LENGTH_COL_INDEX },
-    { length: TABLE_LENGTH_COL_NAME, text: 'name', center: true },
-    { length: TABLE_LENGTH_COL_NAME_ALIAS, text: 'alias', center: true },
-    { length: TABLE_LENGTH_COL_DEMO, text: 'demo', center: true },
+export function cli() {
+  const tableColumn: TableColumn[][] = [
+    [
+      { name: '', width: 7 },
+      { name: 'name', width: 34, textAlign: 'center' },
+      { name: 'alias', width: 30, textAlign: 'center' },
+      { name: 'demo', width: 40, textAlign: 'center' },
+    ],
   ];
 
-  const table = Object.entries(state)
-    .map(([groupName, group]) => {
-      return [
-        createLine(MAX_COUNT_CHARS, ' ', '|'),
-        createRow(MAX_COUNT_CHARS, ` ${groupName.toUpperCase()}`, '|', false),
-        createLine(MAX_COUNT_CHARS, ' ', '|'),
+  const tableItems: (TableItem[] | TableItemGroup)[] = [];
+  const demoText = rowText('my demo text!', 40, { textAlign: 'center' });
 
-        ...group.map((ansi, index) => {
-          const { name, aliasName, context } = ansi;
-          const contextText = `${context}${demoText}${styles.reset}`;
+  Object.entries(state).forEach(([groupName, group]) => {
+    tableItems.push({
+      name: groupName.toUpperCase(),
+    });
 
-          const bodyTable = [
-            { length: TABLE_LENGTH_COL_INDEX, text: String(index + 1) },
-            { length: TABLE_LENGTH_COL_NAME, text: name },
-            { length: TABLE_LENGTH_COL_NAME_ALIAS, text: aliasName || '---' },
-            { length: TABLE_LENGTH_COL_DEMO, text: contextText },
-          ];
+    group.forEach((ansi, index) => {
+      const { name, aliasName, context } = ansi;
+      const contextText = `${context}${demoText}${styles.reset}`;
 
-          return createRowTable(bodyTable, '|');
-        }),
-      ].join('\n');
-    })
-    .join('\n');
+      tableItems.push([
+        { context: index + 1, textAlign: 'center' },
+        { context: name },
+        { context: aliasName || '---' },
+        { context: contextText },
+      ]);
+    });
+  });
 
-  const context = [
-    createLine(MAX_COUNT_CHARS, '-', '#'),
-    createLine(MAX_COUNT_CHARS, ' ', '|'),
-    createRow(MAX_COUNT_CHARS, `DEMO: ${packageJson.name.toUpperCase()}`, '|'),
-    createRow(MAX_COUNT_CHARS, '-------', '|'),
-    createRow(MAX_COUNT_CHARS, `version ${packageJson.version}`, '|'),
-    createLine(MAX_COUNT_CHARS, ' ', '|'),
-    createLine(MAX_COUNT_CHARS, '-', '#'),
-    createRowTable(headTable, '|'),
-    table,
-    createLine(MAX_COUNT_CHARS, '-', '#'),
+  const tableOptions: TableOptions = {
+    hideOuterBorderHorizon: true,
+    hideOuterBorderVertical: true,
+    borderHorizonChar: ' ',
+    borderXChar: ' ',
+  };
+
+  const cardContext = table(tableColumn, tableItems, tableOptions) as string[];
+
+  const cardTitle: CardTitle[] = [
+    { context: `demo: ${packageJson.name}`.toUpperCase(), textAlign: 'center' },
+    { context: '-------', textAlign: 'center' },
+    { context: `version ${packageJson.version}`, textAlign: 'center' },
   ];
 
-  console.log(context.join('\n'));
+  const context = card(cardContext, cardTitle);
+
+  render(context);
 }

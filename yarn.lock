@@ -470,6 +470,11 @@ confusing-browser-globals@^1.0.10:
   resolved "https://registry.yarnpkg.com/confusing-browser-globals/-/confusing-browser-globals-1.0.11.tgz#ae40e9b57cdd3915408a2805ebd3a5585608dc81"
   integrity sha512-JsPKdmh8ZkmnHxDk55FZ1TqVLvEQTvoByJZRN9jzI0UjxK/QgAmsphz7PGtqgPieQZ/CQcHWXCR7ATDNhGe+YA==
 
+console-layout@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/console-layout/-/console-layout-1.0.3.tgz#51088dbaedbf2ac5b0e791601e4c6ad4935bb8d3"
+  integrity sha512-tOEs6eHxEJzicrdQNzvOaz9cKK3YEoMKlCs+UhnEFs6tsNMcUKk4fCgYzkyc6Oj0Avs+tj1BtEmY1OOcjvJIqA==
+
 create-require@^1.1.0:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/create-require/-/create-require-1.1.1.tgz#c1d7e8f1e5f6cfc9ff65f9cd352d37348756c333"
