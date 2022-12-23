@@ -1,3 +1,3 @@
-import { ANSI_CODE } from './_common';
+import { ANSI_CODE } from './constants';
 
 export const reset = `${ANSI_CODE}0m`;
