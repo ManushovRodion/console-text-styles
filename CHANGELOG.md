@@ -1,5 +1,5 @@
 # CONSOLE-TEXT-STYLES
 
-- Changelog: [Русский](./docs/CHANGELOG-RU.md)
+- Changelog [Русский](./docs/README-RU.md)
 
-- Changelog: [English](./docs/CHANGELOG-EN.md)
+- Changelog: [English](./docs/README-EN.md)

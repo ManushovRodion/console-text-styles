@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-const lib = require('../dist/demo.cjs');
+const lib = require('../dist/demo-console-text-styles.cjs.js');
 
 try {
   lib.cli(process);

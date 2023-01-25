@@ -1,20 +1,21 @@
-import {
-  card,
+import { card, render, rowText, table } from 'console-layout';
+import type {
   CardTitle,
-  render,
-  rowText,
-  table,
   TableColumn,
   TableItem,
   TableItemGroup,
   TableOptions,
 } from 'console-layout';
 
+import { name, version } from '../package.json';
 import * as styles from './main';
-import state from './demo/state';
-const packageJson = require('../package.json');
+
+import { createState } from './demo/createState';
+import type { Ansi } from './demo/types';
 
 export function cli() {
+  const state = createState(styles);
+
   const tableColumn: TableColumn[][] = [
     [
       { name: '', width: 7 },
@@ -32,7 +33,7 @@ export function cli() {
       name: groupName.toUpperCase(),
     });
 
-    group.forEach((ansi, index) => {
+    group.forEach((ansi: Ansi, index: number) => {
       const { name, aliasName, context } = ansi;
       const contextText = `${context}${demoText}${styles.reset}`;
 
@@ -55,9 +56,9 @@ export function cli() {
   const cardContext = table(tableColumn, tableItems, tableOptions) as string[];
 
   const cardTitle: CardTitle[] = [
-    { context: `demo: ${packageJson.name}`.toUpperCase(), textAlign: 'center' },
+    { context: `demo: ${name}`.toUpperCase(), textAlign: 'center' },
     { context: '-------', textAlign: 'center' },
-    { context: `version ${packageJson.version}`, textAlign: 'center' },
+    { context: `version ${version}`, textAlign: 'center' },
   ];
 
   const context = card(cardContext, cardTitle);

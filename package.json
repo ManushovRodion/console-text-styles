@@ -3,22 +3,6 @@
   "version": "1.0.0",
   "description": "[RU]Утилита, которая позволяет задать стиль текста console js, используюя ANSI. В первую очередь акцент на терминал NodeJs.;[EN]Utility that allows you to style console js text using ANSI. Primarily focus on the NodeJs terminal.",
   "license": "MIT",
-  "author": "ManushovRodion <rodion-krox@mauil.ru>",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ManushovRodion/console-text-styles.git"
-  },
-  "bugs": {
-    "url": "https://github.com/ManushovRodion/console-text-styles/issues"
-  },
-  "homepage": "https://github.com/ManushovRodion/console-text-styles",
-  "main": "dist/console-text-styles.cjs.js",
-  "types": "dist/console-text-styles.d.ts",
-  "unpkg": "dist/console-text-styles.umd.js",
-  "module": "dist/console-text-styles.es.js",
-  "bin": {
-    "demo-console-text-styles": "./bin/cli.js"
-  },
   "keywords": [
     "console",
     "terminal",
@@ -29,43 +13,64 @@
     "js",
     "node"
   ],
+  "homepage": "https://github.com/ManushovRodion/console-text-styles",
+  "author": {
+    "name": "Manushov Rodion"
+  },
   "files": [
     "dist"
   ],
+  "main": "dist/console-text-styles.cjs.js",
+  "unpkg": "dist/console-text-styles.umd.js",
+  "module": "dist/console-text-styles.esm.js",
+  "types": "dist/console-text-styles.d.ts",
+  "bin": {
+    "demo-console-text-styles": "./bin/cli.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ManushovRodion/console-text-styles.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ManushovRodion/console-text-styles/issues"
+  },
   "scripts": {
-    "lint": "eslint",
-    "lint:format": "prettier --write .",
-    "build": "ts-node scripts/build.ts",
-    "demo:cli": "node bin/cli.js"
+    "build": "rimraf dist && rollup --c rollup.config.ts --configPlugin typescript && rollup --c rollup.demo.config.ts --configPlugin typescript && rimraf dist/types",
+    "lint": "eslint --ignore-path .gitignore .",
+    "lint:format": "prettier --ignore-path .gitignore --write .",
+    "test": "jest"
   },
   "dependencies": {},
   "devDependencies": {
-    "@rollup/plugin-node-resolve": "^13.3.0",
-    "@rollup/plugin-typescript": "^8.3.2",
-    "@types/fs-extra": "^9.0.13",
-    "@types/node": "^17.0.39",
-    "@typescript-eslint/eslint-plugin": "^5.27.0",
-    "@typescript-eslint/parser": "^5.27.0",
-    "console-layout": "^1.0.3",
-    "eslint": "^8.16.0",
-    "eslint-config-airbnb-base": "^15.0.0",
-    "eslint-config-airbnb-typescript": "^17.0.0",
-    "eslint-config-prettier": "^8.5.0",
-    "eslint-plugin-import": "^2.26.0",
-    "eslint-plugin-prettier": "^4.0.0",
-    "fs-extra": "^10.1.0",
-    "husky": "^8.0.1",
-    "prettier": "^2.6.2",
-    "rollup": "^2.75.5",
-    "rollup-plugin-dts": "^4.2.2",
-    "rollup-plugin-terser": "^7.0.2",
-    "ts-node": "^10.8.1",
-    "tslib": "^2.4.0",
-    "typescript": "^4.7.2"
+    "@rollup/plugin-json": "6.0.0",
+    "@rollup/plugin-terser": "0.3.0",
+    "@rollup/plugin-typescript": "11.0.0",
+    "@types/jest": "29.2.5",
+    "@types/node": "16.18.11",
+    "@typescript-eslint/eslint-plugin": "5.48.0",
+    "@typescript-eslint/parser": "5.48.0",
+    "console-layout": "1.0.4",
+    "eslint": "8.31.0",
+    "eslint-config-prettier": "8.6.0",
+    "husky": "8.0.3",
+    "jest": "29.3.1",
+    "lint-staged": "13.1.0",
+    "prettier": "2.8.2",
+    "rimraf": "3.0.2",
+    "rollup": "3.9.1",
+    "rollup-plugin-dts": "5.1.1",
+    "ts-jest": "29.0.3",
+    "tslib": "2.4.1",
+    "typescript": "4.9.4"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "yarn lint:format && yarn lint --fix"
+      "pre-commit": "lint-staged",
+      "pre-push": "yarn test"
     }
+  },
+  "lint-staged": {
+    "*.*": "yarn lint:format",
+    "*.ts": "yarn lint"
   }
 }

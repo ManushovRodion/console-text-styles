@@ -1,6 +1,8 @@
 # Node artifact files
 node_modules
 dist
+coverage
+yarn.lock
 
 # Generated OS
 .DS_Store
@@ -20,3 +22,4 @@ Thumbs.db
 *.njsproj
 *.sln
 *.sw?
+  
