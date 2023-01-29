@@ -4,7 +4,7 @@
 
 ### # v1.0.0 (2022-06-08)
 
-Package release `console-text-styles`
+Package release `console-text-styles`.
 
 ## # v1.0.1 (2023-01-29)
 
@@ -13,3 +13,5 @@ Package release `console-text-styles`
 ## # v1.0.2 (2023-01-29)
 
 - fix: When you need to import functions from `console-text-styles` into your project and when using `@rollup/plugin-node-resolve`, the package is marked as external and not part of the new project.
+
+- fix: Missing README.md for multilanguage.

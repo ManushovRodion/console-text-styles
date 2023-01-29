@@ -18,7 +18,8 @@
     "name": "Manushov Rodion"
   },
   "files": [
-    "dist"
+    "dist",
+    "docs"
   ],
   "main": "dist/console-text-styles.cjs.js",
   "unpkg": "dist/console-text-styles.umd.js",
