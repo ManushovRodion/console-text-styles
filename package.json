@@ -22,7 +22,7 @@
   ],
   "main": "dist/console-text-styles.cjs.js",
   "unpkg": "dist/console-text-styles.umd.js",
-  "module": "dist/console-text-styles.esm.js",
+  "module": "dist/console-text-styles.es.js",
   "types": "dist/console-text-styles.d.ts",
   "bin": {
     "demo-console-text-styles": "./bin/cli.js"
