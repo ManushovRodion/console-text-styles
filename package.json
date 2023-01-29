@@ -1,6 +1,6 @@
 {
   "name": "console-text-styles",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "[RU]Утилита, которая позволяет задать стиль текста console js, используюя ANSI. В первую очередь акцент на терминал NodeJs.;[EN]Utility that allows you to style console js text using ANSI. Primarily focus on the NodeJs terminal.",
   "license": "MIT",
   "keywords": [
