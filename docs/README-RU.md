@@ -46,7 +46,7 @@ export function createMessageError(message: string) {
 
 ## # Лицензия
 
-[![skeleton-lib-cli]]([https://github.com/ManushovRodion/skeleton-lib-cli/docs/README-RU.md](https://github.com/ManushovRodion/console-text-styles/blob/master/docs/README-RU.md))
+[![skeleton-lib-cli]](https://github.com/ManushovRodion/console-text-styles/blob/master/docs/README-RU.md)
 
 [skeleton-lib-cli]: https://img.shields.io/badge/%D1%81%D0%BE%D0%B7%D0%B4%D0%B0%D0%BD%D0%BE%20%D0%BD%D0%B0%20%D0%B1%D0%B0%D0%B7%D0%B5-skeleton--lib--cli-green?style=for-the-badge
 
